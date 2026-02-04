@@ -20,3 +20,7 @@ Known Bug:
   "Display N possibilities (y/ n)?" pops up. 
 
   ... You can go ahead and hit n for that. 
+
+As a disclaimer: 
+I personally made sure to scrub the repo and its caches 
+of all potentially cached student ids &| information by cleaning the commit history.
