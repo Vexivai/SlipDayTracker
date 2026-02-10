@@ -21,6 +21,9 @@ Known Bug:
 
   ... You can go ahead and hit n for that. 
 
+*Newest Patch*
+> EX wasn't included in confirmed_attendance_values!!
+
 As a disclaimer: 
 I personally made sure to scrub the repo and its caches 
 of all potentially cached student ids &| information by cleaning the commit history.
