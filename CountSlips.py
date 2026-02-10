@@ -7,6 +7,7 @@ Purpose
 -------
 Count earned "slip days" from a Canvas gradebook export CSV.
 - Attendance columns: "MM-DD (#####)" with values like 1.00, 0.00, EX.
+  (EX is counted as attendance only if included in CONFIRMED_ATTENDANCE_VALUES.)
 - Every 5 confirmed attendances earns 1 slip day.
 
 Workflow
@@ -59,8 +60,9 @@ def _maybe_reexec_into_venv(reason: str) -> None:
 
 # Values in attendance cells that count as "confirmed attendance".
 # Based on the sample CSV: 1.00 is present, 0.00 is absent, EX is excused.
-# Default: ONLY "1" counts as present. If your policy treats EX as present, add "EX" below.
-CONFIRMED_ATTENDANCE_VALUES = {"1", "1.0", "1.00", "1.000", "1.0000"}
+# Default: "1" counts as present.
+# If your policy treats EX (excused) as present for slip-day accrual, include it here.
+CONFIRMED_ATTENDANCE_VALUES = {"1", "1.0", "1.00", "1.000", "1.0000", "EX"}
 
 # How many attendances are required to earn 1 slip day.
 ATTENDANCES_PER_SLIP = 5
